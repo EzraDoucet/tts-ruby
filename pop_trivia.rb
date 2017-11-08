@@ -28,4 +28,4 @@ end
 
 puts "Thanks for playing Ruby Trivia!"
 puts "You got #{r} answers correct!"
-puts "However, you got #{w} answers wrong... Better luck next time!"
+puts "However, you got #{w} answers wrong... Better luck next time!!"
