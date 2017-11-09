@@ -21,11 +21,23 @@ class Inventory
   new_thing = gets.chomp.downcase
   puts "How many #{new_thing} do you have?"
   new_number = gets.chomp
-  # *** Make this so it's recursive if you don't put an integer ***
-  @goods[new_thing] = new_number
-  # puts @goods
-  sleep(2)
+  if new_number == "0"
+   @goods[new_thing] = 0
+   sleep(2)
   system("clear")
+  elsif new_number.to_i == 0
+   puts "Put a real number, please."
+   add_item
+  else
+   @goods[new_thing] = new_number
+   sleep(2)
+  end
+
+  # *** Make this so it's recursive if you don't put an integer ***
+  # ^^ Have to make an if statement to check if the string is "0", because any string of letters will return "0" if asked to be a number
+
+  # puts @goods
+
  end
 
  def delete_item
