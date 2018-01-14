@@ -31,6 +31,7 @@ class Inventory
   else
    @goods[new_thing] = new_number
    sleep(2)
+   system("clear")
   end
 
   # *** Make this so it's recursive if you don't put an integer ***
@@ -122,6 +123,7 @@ def menu(restaurant)
   menu(restaurant)
   puts ""
  when 6
+  puts ""
   puts "Time for a shot and a beer."
  else
   puts "C'mon, that's not a valid choice..."
