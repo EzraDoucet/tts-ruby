@@ -27,13 +27,14 @@ loop do
     puts "Do you want to look up an area code based on a city? (Y/N)"
 
     answer = gets.chomp
-    if answer != "Y"
+    if answer.capitalize != "Y"
+        puts "Goodbye!"
         break
     end
     puts "Which city do you want the areacode for?"
     city_names(dial_book)
     puts "Enter the city you'd like to find the code for."
-    prompt = gets.chomp
+    prompt = gets.chomp.split.map(&:capitalize).join(' ')
 
     if dial_book.include?(prompt)
         puts "The area code for #{prompt} is #{get_area_code(dial_book, prompt)}"
